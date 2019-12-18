@@ -15,6 +15,7 @@ tag in the HTML file.
 ## Installation
 
 - Ensure that parcel is installed on machine: `npm install -g parcel-bundler`
+- From root directory run an npm install: `npm install`
 
 ## Start
 
