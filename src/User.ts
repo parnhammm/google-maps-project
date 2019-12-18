@@ -1,11 +1,12 @@
 import faker from "faker";
+import { Locatable } from "./Locatable";
 
 /**
  * Class to represent a user
  *
  * This is created with random data
  */
-export class User {
+export class User implements Locatable {
   name: string;
   location: {
     lat: number;

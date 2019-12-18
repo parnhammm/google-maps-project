@@ -1,3 +1,5 @@
+import { Locatable } from "./Locatable";
+
 /**
  * Wrapper class around the google.maps.Map
  */
@@ -15,6 +17,21 @@ export class Map {
       center: {
         lat: 0,
         lng: 0
+      }
+    });
+  }
+
+  /**
+   * Adds a map marker
+   *
+   * @param locatable The object to locate
+   */
+  public addMarker(locatable: Locatable): void {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: locatable.location.lat,
+        lng: locatable.location.lng
       }
     });
   }
