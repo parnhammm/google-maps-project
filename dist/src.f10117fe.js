@@ -123,12 +123,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+/**
+ * Wrapper class around the google.maps.Map
+ */
 
 var Map =
 /** @class */
 function () {
-  function Map() {
-    this.googleMap = new google.maps.Map(document.getElementById("map"), {
+  /**
+   * Constructs an instance of Map
+   *
+   * @param element The element to render the map into
+   */
+  function Map(element) {
+    this.googleMap = new google.maps.Map(element, {
       zoom: 1,
       center: {
         lat: 0,
@@ -151,7 +159,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var Map_1 = require("./Map");
 
-var map = new Map_1.Map();
+var map = new Map_1.Map(document.getElementById("map"));
 },{"./Map":"src/Map.ts"}],"../../../../usr/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -180,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43373" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,5 +1,10 @@
 import faker from "faker";
 
+/**
+ * Class to represent a user
+ *
+ * This is created with random data
+ */
 export class User {
   name: string;
   location: {
@@ -7,6 +12,9 @@ export class User {
     lng: number;
   };
 
+  /**
+   * Constructs a User object
+   */
   constructor() {
     this.name = faker.name.firstName();
     this.location = {

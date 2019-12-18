@@ -2,4 +2,4 @@
 //import { Company } from "./Company";
 import { Map } from "./Map";
 
-const map = new Map();
+const map = new Map(document.getElementById("map"));

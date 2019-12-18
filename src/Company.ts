@@ -1,5 +1,8 @@
 import faker from "faker";
 
+/**
+ * Class to represent a Company
+ */
 export class Company {
   name: string;
   catchPhrase: string;
@@ -8,6 +11,9 @@ export class Company {
     lng: number;
   };
 
+  /**
+   * Constructs a Company object
+   */
   constructor() {
     this.name = faker.company.companyName();
     this.catchPhrase = faker.company.catchPhrase();
