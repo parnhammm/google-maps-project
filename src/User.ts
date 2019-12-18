@@ -23,4 +23,8 @@ export class User implements Locatable {
       lng: parseFloat(faker.address.longitude())
     };
   }
+
+  public getMarkerContent(): string {
+    return `This user's name is ${this.name}.`;
+  }
 }

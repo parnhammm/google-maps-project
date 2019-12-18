@@ -27,12 +27,20 @@ export class Map {
    * @param locatable The object to locate
    */
   public addMarker(locatable: Locatable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: locatable.location.lat,
         lng: locatable.location.lng
       }
+    });
+
+    marker.addListener("click", () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: locatable.getMarkerContent()
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }

@@ -7,4 +7,6 @@ export interface Locatable {
     lat: number;
     lng: number;
   };
+
+  getMarkerContent(): string;
 }
